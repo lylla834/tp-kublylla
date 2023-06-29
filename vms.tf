@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "Kubernetes" {
-   name = "vincent-Kubernetes"
+   name = "lylla-Kubernetes"
    location = var.location
 }
 
@@ -27,11 +27,11 @@ resource "tls_private_key" "SSH" {
     }
 
     computer_name                   = "Worker-${count.index}"
-    admin_username                  = "vincent"
+    admin_username                  = "lylla"
     disable_password_authentication = true
 
     admin_ssh_key {
-      username   = "vincent"
+      username   = "lylla"
       public_key = tls_private_key.SSH.public_key_openssh
    }
 
@@ -59,11 +59,11 @@ resource "tls_private_key" "SSH" {
     }
 
     computer_name                   = "Manager"
-    admin_username                  = "vincent"
+    admin_username                  = "lylla"
     disable_password_authentication = true
 
     admin_ssh_key {
-     username   = "vincent"
+     username   = "lylla"
      public_key = tls_private_key.SSH.public_key_openssh
     }
 
