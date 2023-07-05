@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "Kubernetes" {
-   name = "lylla-Kubernetes"
+   name = "lylla-k8s"
    location = var.location
 }
 
@@ -22,7 +22,7 @@ resource "tls_private_key" "SSH" {
     source_image_reference  {
       publisher = "Canonical"
       offer     = "0001-com-ubuntu-server-jammy"
-      sku       = "22_04-lts-gen2"
+      sku       = "20_04-lts-gen2"
       version   = "latest"
     }
 
@@ -53,8 +53,8 @@ resource "tls_private_key" "SSH" {
 
     source_image_reference {
      publisher = "Canonical"
-     offer     = "0001-com-ubuntu-server-jammy"
-     sku       = "22_04-lts-gen2"
+     offer     = "UbuntuServer"
+     sku       = "20.04-LTS"
      version   = "latest"
     }
 
