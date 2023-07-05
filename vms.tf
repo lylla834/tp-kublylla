@@ -21,7 +21,7 @@ resource "tls_private_key" "SSH" {
 
     source_image_reference  {
       publisher = "Canonical"
-      offer     = "0001-com-ubuntu-server-jammy"
+      offer     = "UbuntuServer"
       sku       = "20_04-lts-gen2"
       version   = "latest"
     }
